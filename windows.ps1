@@ -1,6 +1,6 @@
 # New Windows machine: install OpenSSH Server, trust the Mac's SSH key, join Tailscale,
 # so the Mac can SSH in over Tailscale.
-# Usage (PowerShell, machine online):  irm is.gd/nkwin | iex
+# Usage (PowerShell, machine online):  irm https://is.gd/nkwin | iex
 # Safe to run again; finished steps are skipped. ASCII only on purpose (irm | iex encoding).
 
 $ErrorActionPreference = 'Stop'

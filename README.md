@@ -10,7 +10,7 @@
 2. 貼上這一行，按 Enter：
 
    ```powershell
-   irm is.gd/nkwin | iex
+   irm https://is.gd/nkwin | iex
    ```
 
 ## Linux（Ubuntu 等）
@@ -19,7 +19,7 @@
 2. 貼上這一行，按 Enter，輸入這台電腦的登入密碼：
 
    ```bash
-   curl -fsSL is.gd/nklnx | sudo sh
+   curl -fsSL https://is.gd/nklnx | sudo sh
    ```
 
 ## 跑到最後一步時

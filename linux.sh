@@ -1,6 +1,6 @@
 #!/bin/sh
 # 新 Linux 機器上線：裝 SSH、信任 Mac 的金鑰、加入 Tailscale，讓 Mac 能遠端 SSH 進來。
-# 用法（機器要能上網）：curl -fsSL is.gd/nklnx | sudo sh
+# 用法（機器要能上網）：curl -fsSL https://is.gd/nklnx | sudo sh
 # 可以重複跑；已經做好的步驟會跳過。
 set -eu
 
@@ -9,7 +9,7 @@ MAC_KEY='ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJpZBHkayfHyqkMd3Up10zjIDCATGNZYgEG
 step() { printf '\n\033[1;36m==> %s\033[0m\n' "$1"; }
 die() { printf '\n\033[1;31mERROR: %s\033[0m\n' "$1" >&2; exit 1; }
 
-[ "$(id -u)" -eq 0 ] || die 'Run with sudo:  curl -fsSL is.gd/nklnx | sudo sh'
+[ "$(id -u)" -eq 0 ] || die 'Run with sudo:  curl -fsSL https://is.gd/nklnx | sudo sh'
 
 TARGET_USER="${SUDO_USER:-}"
 [ -n "$TARGET_USER" ] || TARGET_USER="$(logname 2>/dev/null || true)"
